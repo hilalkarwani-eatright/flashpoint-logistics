@@ -1,0 +1,1701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flashpoint Logistics Ltd | Same-Day & Next-Day Courier London & UK</title>
+<meta name="description" content="Fast, reliable same-day and next-day courier and logistics services across London and the UK. Based in West London. Get a quote today.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="alternate icon" href="favicon.svg">
+<meta name="theme-color" content="#101a45">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1B2A6B;
+    --navy-dark: #101a45;
+    --navy-mid: #243580;
+    --orange: #F97316;
+    --orange-dark: #ea6500;
+    --white: #ffffff;
+    --off-white: #f5f6fa;
+    --light-gray: #e8eaf2;
+    --text-dark: #111827;
+    --text-mid: #374151;
+    --text-muted: #6B7280;
+    --border: rgba(27,42,107,0.12);
+    --section-gap: 96px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Barlow', sans-serif;
+    font-size: 16px;
+    color: var(--text-dark);
+    background: var(--white);
+    overflow-x: hidden;
+  }
+
+  h1,h2,h3,h4 {
+    font-family: 'Barlow Condensed', sans-serif;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: var(--navy-dark);
+    border-bottom: 2px solid var(--orange);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    height: 76px;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+  }
+
+  .logo-mark {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+  }
+
+  .logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+  }
+
+  .logo-text .brand {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--white);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .logo-text .brand span { color: var(--orange); }
+
+  .logo-text .sub {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    color: rgba(255,255,255,0.5);
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--orange); }
+
+  .nav-cta {
+    background: var(--orange);
+    color: var(--white) !important;
+    padding: 9px 20px;
+    border-radius: 4px;
+    font-weight: 700 !important;
+    transition: background 0.2s !important;
+  }
+
+  .nav-cta:hover { background: var(--orange-dark) !important; color: var(--white) !important; }
+
+  .nav-hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+  }
+
+  .nav-hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--white);
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 76px; left: 0; right: 0;
+    background: var(--navy-dark);
+    padding: 24px 5%;
+    z-index: 99;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .mobile-menu.open { display: block; }
+
+  .mobile-menu a {
+    display: block;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+
+  .mobile-menu a:last-child { border: none; }
+
+  /* ── HERO ── */
+  #hero {
+    min-height: 100vh;
+    background: var(--navy-dark);
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 130px 5% 80px;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(135deg, rgba(249,115,22,0.08) 0%, transparent 50%),
+      radial-gradient(ellipse at 70% 50%, rgba(27,42,107,0.6) 0%, transparent 70%);
+    z-index: 0;
+  }
+
+  .hero-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    z-index: 0;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 680px;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(249,115,22,0.15);
+    border: 1px solid rgba(249,115,22,0.35);
+    border-radius: 100px;
+    padding: 6px 16px;
+    margin-bottom: 28px;
+  }
+
+  .hero-badge-dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--orange);
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(0.85); }
+  }
+
+  .hero-badge span {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--orange);
+  }
+
+  h1.hero-title {
+    font-size: clamp(52px, 8vw, 96px);
+    font-weight: 900;
+    color: #ffffff !important;
+    text-transform: uppercase;
+    line-height: 0.95;
+    margin-bottom: 8px;
+    text-shadow: 0 2px 24px rgba(0,0,0,0.4);
+  }
+
+  h1.hero-title em {
+    color: var(--orange) !important;
+    font-style: normal;
+  }
+
+  .hero-tagline {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(18px, 3vw, 26px);
+    font-weight: 600;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+  }
+
+  .hero-tagline span {
+    color: rgba(249,115,22,0.7);
+    margin: 0 10px;
+  }
+
+  .hero-desc {
+    font-size: 18px;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.65;
+    max-width: 520px;
+    margin-bottom: 40px;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--orange);
+    color: var(--white);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 16px 32px;
+    border-radius: 4px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+  }
+
+  .btn-primary:hover { background: var(--orange-dark); transform: translateY(-1px); }
+
+  .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    color: var(--white);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 14px 28px;
+    border-radius: 4px;
+    border: 2px solid rgba(255,255,255,0.3);
+    text-decoration: none;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .btn-outline:hover { border-color: var(--orange); color: var(--orange); }
+
+  .hero-stats {
+    display: flex;
+    gap: 40px;
+    margin-top: 56px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .hero-stat-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--orange);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .hero-stat-label {
+    font-size: 13px;
+    color: rgba(255,255,255,0.45);
+    font-weight: 500;
+    letter-spacing: 0.03em;
+  }
+
+  .hero-van {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 55%;
+    max-width: 720px;
+    z-index: 1;
+    opacity: 0.22;
+    pointer-events: none;
+  }
+
+  @media (max-width: 900px) {
+    .hero-van { opacity: 0.07; width: 90%; right: -10%; }
+  }
+
+  /* ── TICKER ── */
+  .ticker {
+    background: var(--orange);
+    overflow: hidden;
+    height: 40px;
+    display: flex;
+    align-items: center;
+  }
+
+  .ticker-inner {
+    display: flex;
+    animation: ticker-scroll 22s linear infinite;
+    white-space: nowrap;
+  }
+
+  @keyframes ticker-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .ticker-item {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--white);
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .ticker-item::after {
+    content: '●';
+    font-size: 8px;
+    opacity: 0.5;
+  }
+
+  /* ── SECTION SHELL ── */
+  section { padding: var(--section-gap) 5%; }
+
+  .section-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 12px;
+  }
+
+  .section-title {
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--navy-dark);
+    line-height: 1;
+    margin-bottom: 20px;
+  }
+
+  .section-title em {
+    color: var(--orange);
+    font-style: normal;
+  }
+
+  .section-body {
+    font-size: 17px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    max-width: 560px;
+  }
+
+  /* ── SERVICES ── */
+  #services {
+    background: var(--off-white);
+  }
+
+  .services-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: end;
+    margin-bottom: 56px;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+  }
+
+  .service-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 36px 32px;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--orange);
+    transform: scaleX(0);
+    transition: transform 0.3s;
+    transform-origin: left;
+  }
+
+  .service-card:hover::before { transform: scaleX(1); }
+  .service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(27,42,107,0.1);
+    border-color: rgba(27,42,107,0.18);
+  }
+
+  .service-icon {
+    width: 52px;
+    height: 52px;
+    background: rgba(249,115,22,0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .service-icon svg { width: 26px; height: 26px; stroke: var(--orange); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+  .service-card h3 {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--navy-dark);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .service-card p {
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.65;
+  }
+
+  /* ── HOW IT WORKS ── */
+  #how-it-works { background: var(--navy-dark); }
+  #how-it-works .section-title { color: var(--white); }
+  #how-it-works .section-body { color: rgba(255,255,255,0.5); }
+
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    margin-top: 56px;
+    position: relative;
+  }
+
+  .steps::before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: calc(16.66% + 20px);
+    right: calc(16.66% + 20px);
+    height: 2px;
+    background: linear-gradient(90deg, var(--orange), rgba(249,115,22,0.3));
+    z-index: 0;
+  }
+
+  .step {
+    text-align: center;
+    padding: 0 32px;
+    position: relative;
+  }
+
+  .step-num {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid var(--orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 28px;
+    background: var(--navy-dark);
+    position: relative;
+    z-index: 1;
+  }
+
+  .step-num span {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+    color: var(--orange);
+  }
+
+  .step h3 {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--white);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .step p {
+    font-size: 15px;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.65;
+  }
+
+  /* ── WHY CHOOSE US ── */
+  #why-us { background: var(--white); }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    margin-top: 56px;
+  }
+
+  .trust-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .trust-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .trust-check {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: rgba(249,115,22,0.12);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1px;
+  }
+
+  .trust-check svg { width: 14px; height: 14px; stroke: var(--orange); stroke-width: 2.5; fill: none; }
+
+  .trust-item-text h4 {
+    font-size: 18px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--navy-dark);
+    margin-bottom: 4px;
+  }
+
+  .trust-item-text p {
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  .coverage-card {
+    background: var(--navy-dark);
+    border-radius: 12px;
+    padding: 40px;
+    color: var(--white);
+  }
+
+  .coverage-card h3 {
+    font-size: 26px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 24px;
+  }
+
+  .coverage-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 32px;
+  }
+
+  .tag {
+    background: rgba(249,115,22,0.18);
+    border: 1px solid rgba(249,115,22,0.35);
+    color: var(--orange);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 7px 16px;
+    border-radius: 4px;
+  }
+
+  .fleet-info {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 28px;
+  }
+
+  .fleet-info h4 {
+    font-size: 16px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.1em;
+    margin-bottom: 16px;
+  }
+
+  .fleet-items {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .fleet-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .fleet-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--orange);
+    flex-shrink: 0;
+  }
+
+  .fleet-item span {
+    font-size: 15px;
+    color: rgba(255,255,255,0.7);
+  }
+
+  /* ── QUOTE FORM ── */
+  #get-quote {
+    background: var(--off-white);
+  }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    margin-top: 56px;
+    align-items: start;
+  }
+
+  .form-container {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 40px;
+  }
+
+  .form-container h3 {
+    font-size: 26px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--navy-dark);
+    margin-bottom: 28px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  label {
+    display: block;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--navy-dark);
+    margin-bottom: 7px;
+  }
+
+  input, select, textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1.5px solid var(--light-gray);
+    border-radius: 6px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 15px;
+    color: var(--text-dark);
+    background: var(--white);
+    transition: border-color 0.2s;
+    outline: none;
+    appearance: none;
+  }
+
+  input:focus, select:focus, textarea:focus {
+    border-color: var(--orange);
+    box-shadow: 0 0 0 3px rgba(249,115,22,0.12);
+  }
+
+  textarea { resize: vertical; min-height: 100px; }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .form-submit {
+    width: 100%;
+    background: var(--orange);
+    color: var(--white);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 8px;
+  }
+
+  .form-submit:hover { background: var(--orange-dark); }
+
+  .form-note {
+    font-size: 13px;
+    color: var(--text-muted);
+    text-align: center;
+    margin-top: 12px;
+  }
+
+  .contact-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact-block {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 28px;
+  }
+
+  .contact-block-icon {
+    width: 44px; height: 44px;
+    border-radius: 8px;
+    background: rgba(249,115,22,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+
+  .contact-block-icon svg { width: 22px; height: 22px; stroke: var(--orange); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+  .contact-block h4 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+  }
+
+  .contact-block a, .contact-block p {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--navy-dark);
+    text-decoration: none;
+    line-height: 1.5;
+  }
+
+  .contact-block a:hover { color: var(--orange); }
+
+  /* ── DRIVER RECRUITMENT ── */
+  #join-us { background: var(--white); }
+
+  .driver-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    align-items: start;
+    margin-top: 56px;
+  }
+
+  .driver-intro p {
+    font-size: 17px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 28px;
+  }
+
+  .perks {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .perk {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    color: var(--text-mid);
+    font-weight: 500;
+  }
+
+  .perk-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--orange);
+    flex-shrink: 0;
+  }
+
+  /* ── SUCCESS STATES ── */
+  .form-success {
+    display: none;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .form-success.show { display: block; }
+  .form-success-icon { font-size: 48px; margin-bottom: 16px; }
+
+  .form-success h3 {
+    font-size: 26px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--navy-dark);
+    margin-bottom: 10px;
+  }
+
+  .form-success p { color: var(--text-muted); font-size: 16px; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #0a1029;
+    padding: 56px 5% 32px;
+    border-top: 3px solid var(--orange);
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 40px;
+  }
+
+  .footer-brand p {
+    font-size: 15px;
+    color: rgba(255,255,255,0.4);
+    line-height: 1.7;
+    margin-top: 16px;
+    max-width: 340px;
+  }
+
+  .footer-col h4 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.35);
+    margin-bottom: 16px;
+  }
+
+  .footer-col a {
+    display: block;
+    font-size: 15px;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: color 0.2s;
+  }
+
+  .footer-col a:hover { color: var(--orange); }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.07);
+    padding-top: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .footer-bottom p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.3);
+  }
+
+  .footer-bottom span { color: var(--orange); }
+
+  /* ── WHATSAPP FLOAT ── */
+  .whatsapp-float {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #25D366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+    z-index: 200;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    animation: float-in 0.6s 1s both;
+  }
+
+  @keyframes float-in {
+    from { opacity: 0; transform: scale(0.5); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  .whatsapp-float:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 28px rgba(37,211,102,0.5);
+  }
+
+  .whatsapp-float svg { width: 32px; height: 32px; fill: white; }
+
+  .whatsapp-tooltip {
+    position: absolute;
+    right: 70px;
+    background: var(--navy-dark);
+    color: var(--white);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+    padding: 7px 14px;
+    border-radius: 4px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  .whatsapp-float:hover .whatsapp-tooltip { opacity: 1; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    nav { padding: 0 4%; }
+    .nav-links { display: none; }
+    .nav-hamburger { display: flex; }
+
+    .services-header { grid-template-columns: 1fr; gap: 20px; }
+    .why-grid { grid-template-columns: 1fr; gap: 40px; }
+    .form-grid { grid-template-columns: 1fr; }
+    .driver-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+    .steps { grid-template-columns: 1fr; }
+    .steps::before { display: none; }
+    .step { padding: 0 0 40px; text-align: left; }
+    .step-num { margin: 0 0 20px; }
+    .hero-van { opacity: 0.06; }
+    section { padding: 64px 4%; }
+    .hero-stats { gap: 24px; }
+  }
+
+  @media (max-width: 600px) {
+    .form-row { grid-template-columns: 1fr; }
+    .hero-actions { flex-direction: column; }
+    .btn-primary, .btn-outline { text-align: center; justify-content: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <svg class="logo-mark" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:52px;height:52px;">
+      <rect width="52" height="52" rx="6" fill="#101a45"/>
+      <!-- Orange speed lines on left -->
+      <line x1="2" y1="20" x2="13" y2="20" stroke="#F97316" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="1" y1="26" x2="10" y2="26" stroke="#F97316" stroke-width="1.8" stroke-linecap="round" opacity="0.7"/>
+      <line x1="2" y1="32" x2="11" y2="32" stroke="#F97316" stroke-width="1.2" stroke-linecap="round" opacity="0.4"/>
+      <!-- White bold F letterform -->
+      <path d="M16 10h18v5H22v5h10v5H22v13h-6z" fill="#ffffff"/>
+      <!-- Orange lightning bolt overlay -->
+      <path d="M28 8l-9 15h7l-4 13 14-18h-8z" fill="#F97316"/>
+    </svg>
+    <div class="logo-text">
+      <div class="brand">Flash<span>point</span></div>
+      <div class="sub">Logistics Ltd</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#how-it-works">How It Works</a></li>
+    <li><a href="#why-us">About</a></li>
+    <li><a href="#join-us">Drive With Us</a></li>
+    <li><a href="#get-quote" class="nav-cta">Get a Quote</a></li>
+  </ul>
+  <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Toggle navigation">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#services" onclick="closeMenu()">Services</a>
+  <a href="#how-it-works" onclick="closeMenu()">How It Works</a>
+  <a href="#why-us" onclick="closeMenu()">About</a>
+  <a href="#join-us" onclick="closeMenu()">Drive With Us</a>
+  <a href="#get-quote" onclick="closeMenu()">Get a Quote</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <div class="hero-badge-dot"></div>
+      <span>Now Serving London & Nationwide</span>
+    </div>
+    <h1 class="hero-title">Flash<em>point</em><br>Logistics</h1>
+    <div class="hero-tagline">Fast <span>·</span> Reliable <span>·</span> Delivered</div>
+    <p class="hero-desc">Same-day and next-day courier services across London and the UK. Based in Greenford — built for businesses and individuals who can't afford to wait.</p>
+    <div class="hero-actions">
+      <a href="#get-quote" class="btn-primary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Get a Free Quote
+      </a>
+      <a href="tel:+447956829172" class="btn-outline" id="callBtn" onclick="handleCall(event)">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6 6l1.27-.85a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.02z"/></svg>
+        <span id="callBtnLabel">Call Now</span>
+      </a>
+      <!-- number reveal shown on desktop after click -->
+      <div id="callReveal" style="display:none;align-items:center;gap:10px;background:rgba(249,115,22,0.15);border:1px solid rgba(249,115,22,0.4);border-radius:4px;padding:12px 20px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6 6l1.27-.85a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.02z"/></svg>
+        <span style="font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:700;color:#F97316;letter-spacing:0.04em;">07956 829 172</span>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="hero-stat-num">24/7</div>
+        <div class="hero-stat-label">Availability</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">2 Vans</div>
+        <div class="hero-stat-label">Ready to Deploy</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">UK-Wide</div>
+        <div class="hero-stat-label">Coverage</div>
+      </div>
+    </div>
+  </div>
+  <!-- Detailed van illustration -->
+  <svg class="hero-van" viewBox="0 0 760 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Speed lines -->
+    <line x1="0" y1="210" x2="80" y2="210" stroke="#F97316" stroke-width="4" stroke-linecap="round"/>
+    <line x1="0" y1="230" x2="55" y2="230" stroke="#F97316" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+    <line x1="0" y1="250" x2="65" y2="250" stroke="#F97316" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+    <line x1="0" y1="270" x2="40" y2="270" stroke="#F97316" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+    <!-- Van main body -->
+    <rect x="90" y="150" width="560" height="190" rx="14" fill="white"/>
+    <!-- Cab section roof curve -->
+    <path d="M90 150 Q120 80 260 80 L660 80 Q680 80 690 100 L710 150Z" fill="white"/>
+    <!-- Orange accent stripe along body -->
+    <rect x="90" y="260" width="560" height="18" fill="#F97316"/>
+    <!-- Windscreen -->
+    <path d="M120 88 Q148 88 250 88 L250 148 L108 148 Z" fill="#1B2A6B" opacity="0.7"/>
+    <!-- Side windows (3) -->
+    <rect x="270" y="95" width="100" height="55" rx="6" fill="#1B2A6B" opacity="0.7"/>
+    <rect x="385" y="95" width="100" height="55" rx="6" fill="#1B2A6B" opacity="0.7"/>
+    <rect x="500" y="95" width="100" height="55" rx="6" fill="#1B2A6B" opacity="0.7"/>
+    <!-- Window shine -->
+    <rect x="274" y="99" width="20" height="48" rx="3" fill="white" opacity="0.15"/>
+    <rect x="389" y="99" width="20" height="48" rx="3" fill="white" opacity="0.15"/>
+    <rect x="504" y="99" width="20" height="48" rx="3" fill="white" opacity="0.15"/>
+    <!-- Rear panel doors -->
+    <rect x="648" y="155" width="2" height="183" fill="#1B2A6B" opacity="0.4"/>
+    <rect x="650" y="82" width="56" height="258" rx="6" fill="white"/>
+    <rect x="650" y="258" width="56" height="18" fill="#F97316"/>
+    <rect x="665" y="100" width="26" height="130" rx="4" fill="#e8eaf2" opacity="0.5"/>
+    <!-- Door handle -->
+    <rect x="697" y="170" width="4" height="22" rx="2" fill="#1B2A6B" opacity="0.5"/>
+    <!-- Grille / front detail -->
+    <rect x="90" y="155" width="20" height="60" rx="4" fill="#e8eaf2" opacity="0.4"/>
+    <rect x="92" y="160" width="14" height="4" rx="1" fill="#1B2A6B" opacity="0.4"/>
+    <rect x="92" y="168" width="14" height="4" rx="1" fill="#1B2A6B" opacity="0.4"/>
+    <rect x="92" y="176" width="14" height="4" rx="1" fill="#1B2A6B" opacity="0.4"/>
+    <rect x="92" y="184" width="14" height="4" rx="1" fill="#1B2A6B" opacity="0.4"/>
+    <rect x="92" y="192" width="14" height="4" rx="1" fill="#1B2A6B" opacity="0.4"/>
+    <!-- Headlight -->
+    <rect x="90" y="130" width="20" height="20" rx="4" fill="#F97316" opacity="0.9"/>
+    <!-- Company name on van side -->
+    <text x="300" y="230" font-family="Arial Black, sans-serif" font-size="28" font-weight="900" fill="#101a45" letter-spacing="1" opacity="0.8">FLASHPOINT</text>
+    <text x="300" y="255" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#101a45" letter-spacing="3" opacity="0.6">LOGISTICS LTD</text>
+    <!-- Front wheel -->
+    <circle cx="175" cy="344" r="52" fill="#374151"/>
+    <circle cx="175" cy="344" r="36" fill="#1f2937"/>
+    <circle cx="175" cy="344" r="20" fill="#4b5563"/>
+    <circle cx="175" cy="344" r="6" fill="#9ca3af"/>
+    <!-- Rear wheel -->
+    <circle cx="555" cy="344" r="52" fill="#374151"/>
+    <circle cx="555" cy="344" r="36" fill="#1f2937"/>
+    <circle cx="555" cy="344" r="20" fill="#4b5563"/>
+    <circle cx="555" cy="344" r="6" fill="#9ca3af"/>
+    <!-- Wheel arches -->
+    <path d="M122 340 Q122 290 175 290 Q228 290 228 340" fill="#101a45" opacity="0.3"/>
+    <path d="M502 340 Q502 290 555 290 Q608 290 608 340" fill="#101a45" opacity="0.3"/>
+    <!-- Ground shadow -->
+    <ellipse cx="380" cy="396" rx="320" ry="10" fill="black" opacity="0.2"/>
+    <!-- Exhaust puff -->
+    <circle cx="55" cy="330" r="10" fill="white" opacity="0.08"/>
+    <circle cx="38" cy="318" r="7" fill="white" opacity="0.05"/>
+    <circle cx="24" cy="308" r="5" fill="white" opacity="0.03"/>
+  </svg>
+</section>
+
+<!-- TICKER -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-inner">
+    <div class="ticker-item">Same-Day Delivery</div>
+    <div class="ticker-item">London & UK Wide</div>
+    <div class="ticker-item">Business Logistics</div>
+    <div class="ticker-item">Competitive Pricing</div>
+    <div class="ticker-item">Secure Handling</div>
+    <div class="ticker-item">Professional Drivers</div>
+    <div class="ticker-item">Based in Greenford</div>
+    <div class="ticker-item">Next-Day Courier</div>
+    <!-- duplicate for seamless loop -->
+    <div class="ticker-item">Same-Day Delivery</div>
+    <div class="ticker-item">London & UK Wide</div>
+    <div class="ticker-item">Business Logistics</div>
+    <div class="ticker-item">Competitive Pricing</div>
+    <div class="ticker-item">Secure Handling</div>
+    <div class="ticker-item">Professional Drivers</div>
+    <div class="ticker-item">Based in Greenford</div>
+    <div class="ticker-item">Next-Day Courier</div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="services-header">
+    <div>
+      <div class="section-label">What We Offer</div>
+      <h2 class="section-title">Our <em>Services</em></h2>
+    </div>
+    <p class="section-body">From urgent same-day runs to regular business contracts — we have the vans, the drivers, and the reliability you need.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9z"/></svg>
+      </div>
+      <h3>Same-Day Delivery</h3>
+      <p>Urgent parcels and freight collected and delivered within hours across London. When speed matters, we deliver.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+      </div>
+      <h3>Next-Day Delivery</h3>
+      <p>Reliable nationwide courier service. Book by 5pm and your delivery goes first thing the following day.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>
+      </div>
+      <h3>Business Logistics</h3>
+      <p>Regular delivery contracts for shops, offices, and e-commerce businesses. Consistent, scheduled, dependable.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      </div>
+      <h3>Nationwide Courier</h3>
+      <p>Flexible UK-wide delivery solutions. No job is too far — we cover the whole country competitively.</p>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how-it-works">
+  <div class="section-label">Simple Process</div>
+  <h2 class="section-title">How It <em>Works</em></h2>
+  <p class="section-body">Three steps from booking to delivered. No hassle, no delays.</p>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num"><span>01</span></div>
+      <h3>Book Your Job</h3>
+      <p>Fill in our quick quote form or call us directly. Tell us the collection address, destination, parcel details, and your required timeframe.</p>
+    </div>
+    <div class="step">
+      <div class="step-num"><span>02</span></div>
+      <h3>We Collect</h3>
+      <p>One of our professional drivers arrives at your collection point on time. Your goods are handled securely and loaded with care.</p>
+    </div>
+    <div class="step">
+      <div class="step-num"><span>03</span></div>
+      <h3>Delivered</h3>
+      <p>Your parcel arrives at the destination as agreed. You'll be kept updated throughout. Job done.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section id="why-us">
+  <div class="section-label">Why Flashpoint</div>
+  <h2 class="section-title">Built on <em>Trust</em></h2>
+  <div class="why-grid">
+    <div class="trust-list">
+      <div class="trust-item">
+        <div class="trust-check">
+          <svg viewBox="0 0 24 24"><polyline points="20,6 9,17 4,12"/></svg>
+        </div>
+        <div class="trust-item-text">
+          <h4>Fast & Reliable</h4>
+          <p>We don't miss deadlines. Same-day availability means we're ready when you need us, not just when it's convenient.</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-check">
+          <svg viewBox="0 0 24 24"><polyline points="20,6 9,17 4,12"/></svg>
+        </div>
+        <div class="trust-item-text">
+          <h4>Competitive Pricing</h4>
+          <p>Transparent quotes with no hidden charges. You know the price before we collect — always.</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-check">
+          <svg viewBox="0 0 24 24"><polyline points="20,6 9,17 4,12"/></svg>
+        </div>
+        <div class="trust-item-text">
+          <h4>Secure Parcel Handling</h4>
+          <p>Every item is treated with care. Our vans are well-maintained and our drivers are fully accountable.</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-check">
+          <svg viewBox="0 0 24 24"><polyline points="20,6 9,17 4,12"/></svg>
+        </div>
+        <div class="trust-item-text">
+          <h4>Professional Drivers</h4>
+          <p>Experienced, insured, and courteous. We represent your business when we're at your customer's door.</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-check">
+          <svg viewBox="0 0 24 24"><polyline points="20,6 9,17 4,12"/></svg>
+        </div>
+        <div class="trust-item-text">
+          <h4>24/7 Availability</h4>
+          <p>Logistics doesn't stop at 5pm. Neither do we. Reach us any time by phone or WhatsApp.</p>
+        </div>
+      </div>
+    </div>
+    <div class="coverage-card">
+      <h3>Our Coverage</h3>
+      <div class="coverage-tags">
+        <span class="tag">Central London</span>
+        <span class="tag">Greater London</span>
+        <span class="tag">West London</span>
+        <span class="tag">North London</span>
+        <span class="tag">South London</span>
+        <span class="tag">East London</span>
+        <span class="tag">Nationwide UK</span>
+      </div>
+      <div class="fleet-info">
+        <h4>Our Fleet</h4>
+        <div class="fleet-items">
+          <div class="fleet-item">
+            <div class="fleet-dot"></div>
+            <span>1× Large Wheel Base (LWB) Van — high-volume loads</span>
+          </div>
+          <div class="fleet-item">
+            <div class="fleet-dot"></div>
+            <span>1× Medium Van — agile city and local runs</span>
+          </div>
+          <div class="fleet-item">
+            <div class="fleet-dot"></div>
+            <span>Both GPS-tracked and fully insured</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GET A QUOTE -->
+<section id="get-quote">
+  <div class="section-label">Request a Quote</div>
+  <h2 class="section-title">Get a <em>Price</em></h2>
+  <p class="section-body">Fill in the details below and we'll come back to you fast — usually within the hour during business hours.</p>
+  <div class="form-grid">
+    <div class="form-container">
+      <h3>Quote Request</h3>
+      <div id="quoteFormWrap">
+        <form id="quoteForm" action="https://formspree.io/f/mojbjdla" method="POST" onsubmit="submitQuote(event)">
+          <input type="hidden" name="_subject" value="New Quote Request — Flashpoint Logistics">
+          <input type="hidden" name="_replyto" id="qEmailHidden">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="qName">Your Name</label>
+              <input type="text" id="qName" placeholder="John Smith" required>
+            </div>
+            <div class="form-group">
+              <label for="qPhone">Phone Number</label>
+              <input type="tel" id="qPhone" placeholder="07700 000000" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="qEmail">Email Address</label>
+            <input type="email" id="qEmail" placeholder="you@email.com">
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="qFrom">Collection Postcode</label>
+              <input type="text" id="qFrom" placeholder="UB6 7AE" required>
+            </div>
+            <div class="form-group">
+              <label for="qTo">Delivery Postcode</label>
+              <input type="text" id="qTo" placeholder="E1 6RF" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="qService">Service Type</label>
+              <select id="qService" required>
+                <option value="" disabled selected>Select service</option>
+                <option>Same-Day Delivery</option>
+                <option>Next-Day Delivery</option>
+                <option>Business / Regular Logistics</option>
+                <option>Nationwide Courier</option>
+                <option>Not sure — advise me</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="qSize">Van Size Needed</label>
+              <select id="qSize">
+                <option value="" disabled selected>Approx. load size</option>
+                <option>Small (boxes / parcels)</option>
+                <option>Medium (furniture / pallets)</option>
+                <option>Large (full van load)</option>
+                <option>Not sure</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="qDetails">Additional Details</label>
+            <textarea id="qDetails" placeholder="Any extra information — item descriptions, urgency, access restrictions, etc."></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send Quote Request →</button>
+          <p class="form-note">We aim to respond within 1 hour. For urgent enquiries call 07956 829 172.</p>
+        </form>
+        <div class="form-success" id="quoteSuccess">
+          <div class="form-success-icon">✅</div>
+          <h3>Quote Request Sent!</h3>
+          <p>We'll be in touch shortly. For anything urgent, call or WhatsApp us on <strong>07956 829 172</strong>.</p>
+        </div>
+      </div>
+    </div>
+    <div class="contact-sidebar">
+      <div class="contact-block">
+        <div class="contact-block-icon">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6 6l1.27-.85a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.02z"/></svg>
+        </div>
+        <h4>Call or WhatsApp</h4>
+        <a href="tel:+447956829172">07956 829 172</a>
+      </div>
+      <div class="contact-block">
+        <div class="contact-block-icon">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <h4>Email Us</h4>
+        <a href="mailto:info@flashpointlogistics.co.uk">info@flashpointlogistics.co.uk</a>
+      </div>
+      <div class="contact-block">
+        <div class="contact-block-icon">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h4>Based At</h4>
+        <p>West London</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DRIVE WITH US -->
+<section id="join-us">
+  <div class="section-label">Owner-Operators Welcome</div>
+  <h2 class="section-title">Drive With <em>Us</em></h2>
+  <div class="driver-grid">
+    <div class="driver-intro">
+      <p>We're growing. If you're a driver with your own van looking for regular work, we want to hear from you. Join the Flashpoint network and get consistent, well-paying runs.</p>
+      <div class="perks">
+        <div class="perk"><div class="perk-dot"></div>Flexible hours — work when you want</div>
+        <div class="perk"><div class="perk-dot"></div>Consistent job flow — no chasing work</div>
+        <div class="perk"><div class="perk-dot"></div>Competitive pay per job</div>
+        <div class="perk"><div class="perk-dot"></div>London & UK routes available</div>
+        <div class="perk"><div class="perk-dot"></div>Must have own van and valid driving licence</div>
+      </div>
+    </div>
+    <div class="form-container">
+      <h3>Driver Application</h3>
+      <div id="driverFormWrap">
+        <form id="driverForm" action="https://formspree.io/f/xkoeorzo" method="POST" onsubmit="submitDriver(event)">
+          <input type="hidden" name="_subject" value="New Driver Application — Flashpoint Logistics">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="dName">Full Name</label>
+              <input type="text" id="dName" placeholder="Your full name" required>
+            </div>
+            <div class="form-group">
+              <label for="dPhone">Phone Number</label>
+              <input type="tel" id="dPhone" placeholder="07700 000000" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="dEmail">Email Address</label>
+            <input type="email" id="dEmail" placeholder="you@email.com" required>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="dVan">Van Type</label>
+              <select id="dVan" required>
+                <option value="" disabled selected>Select van size</option>
+                <option>Small Van</option>
+                <option>Medium Van</option>
+                <option>Large / LWB Van</option>
+                <option>Luton / Box Van</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="dExp">Experience</label>
+              <select id="dExp">
+                <option value="" disabled selected>Years driving commercially</option>
+                <option>Less than 1 year</option>
+                <option>1–3 years</option>
+                <option>3–5 years</option>
+                <option>5+ years</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="dAvail">Availability</label>
+            <select id="dAvail">
+              <option value="" disabled selected>When can you work?</option>
+              <option>Weekdays only</option>
+              <option>Weekends only</option>
+              <option>Any days</option>
+              <option>Flexible</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="dNotes">Anything Else?</label>
+            <textarea id="dNotes" placeholder="Tell us anything else relevant — areas you cover, current commitments, etc."></textarea>
+          </div>
+          <button type="submit" class="form-submit">Submit Application →</button>
+        </form>
+        <div class="form-success" id="driverSuccess">
+          <div class="form-success-icon">🚐</div>
+          <h3>Application Received!</h3>
+          <p>We'll review your details and be in touch soon. Welcome to the Flashpoint network.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="nav-logo" style="margin-bottom:0">
+        <svg width="36" height="36" viewBox="0 0 44 44" fill="none">
+          <rect width="44" height="44" rx="6" fill="#1B2A6B"/>
+          <path d="M22 6L12 26h8l-4 12 16-22h-9z" fill="#F97316"/>
+        </svg>
+        <div class="logo-text">
+          <div class="brand" style="font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:900;color:#fff;letter-spacing:0.02em;text-transform:uppercase;">Flash<span style="color:#F97316">point</span></div>
+          <div class="sub" style="font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.18em;color:rgba(255,255,255,0.4);text-transform:uppercase;">Logistics Ltd</div>
+        </div>
+      </div>
+      <p>Fast. Reliable. Delivered. Same-day and next-day courier services across London and the UK, based in West London.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="#services">Same-Day Delivery</a>
+      <a href="#services">Next-Day Delivery</a>
+      <a href="#services">Business Logistics</a>
+      <a href="#services">Nationwide Courier</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="tel:+447956829172">07956 829 172</a>
+      <a href="mailto:info@flashpointlogistics.co.uk">info@flashpointlogistics.co.uk</a>
+      <a href="#join-us">Drive With Us</a>
+      <a href="#get-quote">Get a Quote</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 <span>Flashpoint Logistics Ltd</span>. All rights reserved. Registered in England & Wales.</p>
+    <p>Based in West London</p>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a class="whatsapp-float" href="https://wa.me/447956829172?text=Hi%2C%20I'd%20like%20a%20quote%20for%20a%20delivery" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <div class="whatsapp-tooltip">WhatsApp Us</div>
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+  function closeMenu() {
+    document.getElementById('mobileMenu').classList.remove('open');
+  }
+
+  // Smart call button: mobile dials directly, desktop reveals number
+  function handleCall(e) {
+    const isMobile = /Android|iPhone|iPad|iPod|webOS/i.test(navigator.userAgent);
+    if (!isMobile) {
+      e.preventDefault();
+      document.getElementById('callBtn').style.display = 'none';
+      const reveal = document.getElementById('callReveal');
+      reveal.style.display = 'flex';
+    }
+  }
+
+  // Detect if running locally (file://) vs live
+  const isLocal = window.location.protocol === 'file:';
+
+  // Quote form submission
+  async function submitQuote(e) {
+    e.preventDefault();
+    const form = document.getElementById('quoteForm');
+    const btn = form.querySelector('.form-submit');
+
+    if (isLocal) {
+      // Running locally — show success and warn
+      form.style.display = 'none';
+      document.getElementById('quoteSuccess').classList.add('show');
+      document.getElementById('quoteSuccess').insertAdjacentHTML('beforeend',
+        '<p style="margin-top:12px;font-size:12px;color:#F97316;">⚠️ Testing locally — form will send real emails once deployed to flashpointlogistics.co.uk</p>'
+      );
+      return;
+    }
+
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+
+    const emailVal = document.getElementById('qEmail').value;
+    document.getElementById('qEmailHidden').value = emailVal;
+
+    try {
+      const data = new FormData(form);
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        form.style.display = 'none';
+        document.getElementById('quoteSuccess').classList.add('show');
+      } else {
+        const json = await res.json();
+        btn.textContent = json.error || 'Failed — try again';
+        btn.disabled = false;
+      }
+    } catch(err) {
+      btn.textContent = 'Failed — try again';
+      btn.disabled = false;
+    }
+  }
+
+  // Driver form submission
+  async function submitDriver(e) {
+    e.preventDefault();
+    const form = document.getElementById('driverForm');
+    const btn = form.querySelector('.form-submit');
+
+    if (isLocal) {
+      form.style.display = 'none';
+      document.getElementById('driverSuccess').classList.add('show');
+      document.getElementById('driverSuccess').insertAdjacentHTML('beforeend',
+        '<p style="margin-top:12px;font-size:12px;color:#F97316;">⚠️ Testing locally — form will send real emails once deployed to flashpointlogistics.co.uk</p>'
+      );
+      return;
+    }
+
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+
+    try {
+      const data = new FormData(form);
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        form.style.display = 'none';
+        document.getElementById('driverSuccess').classList.add('show');
+      } else {
+        const json = await res.json();
+        btn.textContent = json.error || 'Failed — try again';
+        btn.disabled = false;
+      }
+    } catch(err) {
+      btn.textContent = 'Failed — try again';
+      btn.disabled = false;
+    }
+  }
+
+  // Smooth scroll offset for fixed nav
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        window.scrollTo({ top: target.offsetTop - 76, behavior: 'smooth' });
+      }
+    });
+  });
+</script>
+</body>
+</html>
