@@ -1571,9 +1571,25 @@
   </div>
   <div class="footer-bottom">
     <p>© 2026 <span>Flashpoint Logistics Ltd</span>. All rights reserved. Registered in England & Wales.</p>
-    <p>Based in West London</p>
+    <div style="display:flex;gap:20px;flex-wrap:wrap;align-items:center;">
+      <p>Based in West London</p>
+      <a href="privacy-policy.html" style="font-size:13px;color:rgba(255,255,255,0.4);text-decoration:none;">Privacy Policy</a>
+      <a href="terms.html" style="font-size:13px;color:rgba(255,255,255,0.4);text-decoration:none;">Terms & Conditions</a>
+    </div>
   </div>
 </footer>
+
+<!-- COOKIE BANNER -->
+<div id="cookieBanner" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#101a45;border-top:3px solid #F97316;padding:16px 5%;z-index:300;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;">
+  <p style="font-family:'Barlow',sans-serif;font-size:14px;color:rgba(255,255,255,0.75);margin:0;max-width:700px;">
+    We use cookies to ensure the site works correctly and to analyse how it's used. By continuing to use this site you agree to our
+    <a href="privacy-policy.html" style="color:#F97316;">Privacy Policy</a>.
+  </p>
+  <div style="display:flex;gap:12px;flex-shrink:0;">
+    <button onclick="acceptCookies()" style="background:#F97316;color:#fff;border:none;padding:10px 24px;border-radius:4px;font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;text-transform:uppercase;cursor:pointer;letter-spacing:0.05em;">Accept</button>
+    <button onclick="declineCookies()" style="background:transparent;color:rgba(255,255,255,0.5);border:1px solid rgba(255,255,255,0.2);padding:10px 24px;border-radius:4px;font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;text-transform:uppercase;cursor:pointer;letter-spacing:0.05em;">Decline</button>
+  </div>
+</div>
 
 <!-- WHATSAPP FLOAT -->
 <a class="whatsapp-float" href="https://wa.me/447956829172?text=Hi%2C%20I'd%20like%20a%20quote%20for%20a%20delivery" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
@@ -1659,6 +1675,22 @@
       btn.disabled = false;
     }
   }
+
+  // Cookie banner
+  function acceptCookies() {
+    localStorage.setItem('cookieConsent', 'accepted');
+    document.getElementById('cookieBanner').style.display = 'none';
+  }
+  function declineCookies() {
+    localStorage.setItem('cookieConsent', 'declined');
+    document.getElementById('cookieBanner').style.display = 'none';
+  }
+  // Show banner if no decision yet
+  window.addEventListener('load', function() {
+    if (!localStorage.getItem('cookieConsent')) {
+      document.getElementById('cookieBanner').style.display = 'flex';
+    }
+  });
 
   // Smooth scroll offset for fixed nav
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
