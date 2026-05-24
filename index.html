@@ -1708,8 +1708,27 @@
       details: document.getElementById('qDetails').value,
     };
 
+    // Auto-reply params — sent to customer, reuses same template
+    // but EmailJS sends to 'to_email' override when provided
+    const autoReplyParams = {
+      from_name: params.from_name,
+      phone: params.phone,
+      from_email: 'info@flashpointlogistics.co.uk',
+      to_email: params.from_email,
+      collection: params.collection,
+      delivery: params.delivery,
+      service: params.service,
+      van_size: params.van_size,
+      details: '— Thank you for your enquiry. We will be in touch within the hour. For anything urgent call or WhatsApp us on 07956 829 172. —',
+      // Override subject for customer-facing email
+      _subject: 'Quote request received — Flashpoint Logistics',
+    };
+
     try {
+      // Send 1: internal notification to dad
       await emailjs.send('service_ydn95rh', 'template_qvnkcdg', params);
+      // Send 2: auto-reply to customer
+      await emailjs.send('service_ydn95rh', 'template_qvnkcdg', autoReplyParams);
       form.style.display = 'none';
       document.getElementById('quoteSuccess').classList.add('show');
     } catch(err) {
