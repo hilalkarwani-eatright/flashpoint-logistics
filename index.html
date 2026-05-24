@@ -1551,21 +1551,21 @@
           <div class="form-row">
             <div class="form-group">
               <label for="dName">Full Name</label>
-              <input type="text" id="dName" placeholder="Your full name" required>
+              <input type="text" id="dName" name="Full Name" placeholder="Your full name" required>
             </div>
             <div class="form-group">
               <label for="dPhone">Phone Number</label>
-              <input type="tel" id="dPhone" placeholder="07700 000000" required>
+              <input type="tel" id="dPhone" name="Phone Number" placeholder="07700 000000" required>
             </div>
           </div>
           <div class="form-group">
             <label for="dEmail">Email Address</label>
-            <input type="email" id="dEmail" placeholder="you@email.com" required>
+            <input type="email" id="dEmail" name="email" placeholder="you@email.com" required>
           </div>
           <div class="form-row">
             <div class="form-group">
               <label for="dVan">Van Type</label>
-              <select id="dVan" required>
+              <select id="dVan" name="Van Type" required>
                 <option value="" disabled selected>Select van size</option>
                 <option>Small Van</option>
                 <option>Medium Van</option>
@@ -1575,7 +1575,7 @@
             </div>
             <div class="form-group">
               <label for="dExp">Experience</label>
-              <select id="dExp">
+              <select id="dExp" name="Experience">
                 <option value="" disabled selected>Years driving commercially</option>
                 <option>Less than 1 year</option>
                 <option>1–3 years</option>
@@ -1586,7 +1586,7 @@
           </div>
           <div class="form-group">
             <label for="dAvail">Availability</label>
-            <select id="dAvail">
+            <select id="dAvail" name="Availability">
               <option value="" disabled selected>When can you work?</option>
               <option>Weekdays only</option>
               <option>Weekends only</option>
@@ -1596,7 +1596,7 @@
           </div>
           <div class="form-group">
             <label for="dNotes">Anything Else?</label>
-            <textarea id="dNotes" placeholder="Tell us anything else relevant — areas you cover, current commitments, etc."></textarea>
+            <textarea id="dNotes" name="Additional Notes" placeholder="Tell us anything else relevant — areas you cover, current commitments, etc."></textarea>
           </div>
           <button type="submit" class="form-submit">Submit Application →</button>
         </form>
@@ -1739,7 +1739,7 @@
     }
   }
 
-  // Driver form — EmailJS submit
+  // Driver form — Formspree submit
   async function submitDriver(e) {
     e.preventDefault();
     const form = document.getElementById('driverForm');
@@ -1747,22 +1747,23 @@
     btn.textContent = 'Sending…';
     btn.disabled = true;
 
-    const params = {
-      from_name: document.getElementById('dName').value,
-      phone: document.getElementById('dPhone').value,
-      from_email: document.getElementById('dEmail').value,
-      van_type: document.getElementById('dVan').value,
-      experience: document.getElementById('dExp').value,
-      availability: document.getElementById('dAvail').value,
-      notes: document.getElementById('dNotes').value,
-    };
+    const data = new FormData(form);
 
     try {
-      await emailjs.send('service_ydn95rh', 'template_56s69qw', params);
-      form.style.display = 'none';
-      document.getElementById('driverSuccess').classList.add('show');
+      const res = await fetch('https://formspree.io/f/xkoeorzo', {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        form.style.display = 'none';
+        document.getElementById('driverSuccess').classList.add('show');
+      } else {
+        btn.textContent = 'Failed — try again';
+        btn.disabled = false;
+      }
     } catch(err) {
-      console.error('EmailJS error:', err);
+      console.error('Formspree error:', err);
       btn.textContent = 'Failed — try again';
       btn.disabled = false;
     }
