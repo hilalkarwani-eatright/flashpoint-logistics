@@ -1728,8 +1728,8 @@
     try {
       // Send 1: internal notification to dad
       await emailjs.send('service_ydn95rh', 'template_qvnkcdg', params);
-      // Send 2: auto-reply to customer
-      await emailjs.send('service_ydn95rh', 'template_qvnkcdg', autoReplyParams);
+      // Send 2: branded auto-reply to customer
+      await emailjs.send('service_ydn95rh', 'template_i36kk3k', autoReplyParams);
       form.style.display = 'none';
       document.getElementById('quoteSuccess').classList.add('show');
     } catch(err) {
